@@ -3,21 +3,25 @@
  import Signup from "./Components/Signup";
  import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
  import Login from "./Components/Login";
+ import MyModal from "./Components/MyModal";
+
 
 
 function App() {
   return (
     <div className="App">
-
-  <Login/>
-  {/* <Signup/> */}
+    
+  
 
   <Router>
         <Routes>
         {/* <Route exact path="/" component={''} /> */}
 
-        <Route path="/signup" element={<Signup />} />
+        <Route exact path="/" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/mymodal" element={<MyModal />} />
+          
+         
          
           
 

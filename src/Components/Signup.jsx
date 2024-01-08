@@ -1,43 +1,41 @@
 import React, { useState } from "react";
-import leftSignUp from "../Images/leftSignUp.png";
+// import leftLoginPage from '../Images/leftLoginPage.png'
+// import { Dialog } from '@headlessui/react'
+
+
+import Layout from "../Layout";
 
 const Signup = () => {
   const [passwordShown, setPasswordShown] = useState(false);
+  // const [isOpen, setIsOpen] = useState(true);
 
   const togglePassword = () => {
     setPasswordShown(!passwordShown);
   };
 
   return (
-    <div className="grid grid-cols-1 w-full h-screen sm:grid-cols-2 overflow-hidden ">
-      <div
-        className=" sm:flex bg-cover bg-no-repeat bg-center"
-        style={{ backgroundImage: `url(${leftSignUp})` }}
-      >
-        {/* <img
-          className=" w-full object-cover h-[100%]"
-          src={leftLogin}
-          alt="login"
-        /> */}
 
-        {/* <LeftLogin /> */}
-      </div>
+    <Layout>
+      
 
-      <div className="flex justify-center items-center">
-        <div className="w-full flex justify-center items-center flex-col">
+      <div className="w-full flex justify-center items-center flex-col">
           <p className="text-center text-black font-medium text-[1.7rem]">
             WelcomeBack!
           </p>
 
           <p className="text-center">
             Sign up by entering the information below
+
           </p>
+
+          <div className="flex flex-col items-center justify-center w-full ">
+
 
           <div className="w-full mt-5 flex justify-center items-center">
             <input
               type="text"
               placeholder="FirstName"
-              className="w-[32rem] h-[4rem] outline-none px-2 text-[#000] rounded-[12.089px] border-[#C4C4C4] border-[1.712px]"
+              className="w-full h-[4rem] outline-none px-2 text-[#000] rounded-[12.089px] border-[#C4C4C4] border-[1.712px]"
             />
           </div>
 
@@ -45,7 +43,7 @@ const Signup = () => {
             <input
               type="text"
               placeholder="LastName:"
-              className="w-[32rem] h-[4rem] outline-none px-2 text-[#000] rounded-[12.089px] border-[#C4C4C4] border-[1.712px]"
+              className="w-full h-[4rem] outline-none px-2 text-[#000] rounded-[12.089px] border-[#C4C4C4] border-[1.712px]"
             />
           </div>
 
@@ -53,26 +51,39 @@ const Signup = () => {
             <input
               type="email"
               placeholder="Email"
-              className="w-[32rem] h-[4rem] outline-none px-2 text-[#000] rounded-[12.089px] border-[#C4C4C4] border-[1.712px]"
+              className="w-full h-[4rem] outline-none px-2 text-[#000] rounded-[12.089px] border-[#C4C4C4] border-[1.712px]"
             />
           </div>
 
-          <div className="w-full mt-10 flex justify-center items-center gap-8 relative">
-           
+
+
+
+          
+
+          <div className="w-full mt-10 flex justify-center items-center relative">
+
+            <div className=" flex-1">
+
+
+
             <input
               type={passwordShown ? "text" : "password"}
               placeholder="Password"
-              className="w-[32rem] h-[4rem] outline-none px-2 text-[#000] rounded-[12.089px] border-[#C4C4C4] border-[1.712px]"
+              className="w-full h-[4rem] outline-none px-2 text-[#000] rounded-[12.089px] border-[#C4C4C4] border-[1.712px]"
 
              
             />
-             <svg
+              </div>
+            <div className="">
+
+            <svg
+               onClick={togglePassword}
               xmlns="http://www.w3.org/2000/svg"
               width="42"
               height="37"
               viewBox="0 0 42 37"
               fill="none"
-              className="absolute  top-1/2 transform -translate-y-1/2 cursor-pointer"
+              className=" absolute top-1/2 transform -translate-y-1/2 cursor-pointer right-0 mr-10 "
             >
               <g
                 clip-path="url(#a)"
@@ -89,10 +100,56 @@ const Signup = () => {
                 </clipPath>
               </defs>
             </svg>
+
+
+            </div>
+            
+
+          
+           
+           
           </div>
+
+
+
+
+  <div className='flex justify-between items-center w-full'>
+
+<div className="text-[#C4C4C4]">
+  <p className="">Already have an account</p>
+
+</div>
+
+ <button className="">
+ <a className="text-[#55229E] underline" href="/login">
+       login
+        </a>
+       </button>
+
+</div>
+
+  </div>
+
+
+
+<div className="rounded-[13.618px] border border-[#56229E] bg-[#55229E] w-full h-[70px] text-center pt-3 mt-7">
+              <button className="">
+                <p className="font-bold text-2xl font-sans text-white">Sign Up</p>
+              </button>
+            </div>
+
+
+         
+
+          
         </div>
-      </div>
-    </div>
+
+      
+      </Layout>
+  
+       
+     
+   
   );
 };
 
