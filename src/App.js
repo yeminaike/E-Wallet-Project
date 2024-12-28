@@ -1,32 +1,31 @@
 
-// import Login from "./Components/Login";
- import Signup from "./Components/Signup";
+
  import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
- import Login from "./Components/Login";
- import MyModal from "./Components/MyModal";
+import SignUpPage from "./components/SignUp/SignUpPage";
+
+
+
 
 
 
 function App() {
   return (
     <div className="App">
-    
+   
   
 
-  <Router>
+   <Router>
         <Routes>
-        {/* <Route exact path="/" component={''} /> */}
+    
 
-        <Route exact path="/" element={<Signup />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/mymodal" element={<MyModal />} />
-          
+        <Route exact path="/" element={<SignUpPage />} />
+       
          
          
           
 
           </Routes>
-      </Router>
+      </Router> 
 
     </div>
   );
